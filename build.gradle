@@ -19,10 +19,13 @@ repositories {
 
 apply plugin: 'konan'
 konanArtifacts {
-    library('test') {
-        //enableMultiplatform true
-        dependencies {
-            artifacttest "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$kotlinx_coroutines_version"
+    library('A') {
+        srcDir 'src/A'
+    }
+    library('B') {
+        srcDir 'src/B'
+        libraries {
+           artifact 'A'
         }
     }
 }
