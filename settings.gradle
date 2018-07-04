@@ -1,0 +1,5 @@
+enableFeaturePreview('GRADLE_METADATA')
+
+def konanHome='/Users/minamoto/ws/.git-trees/compiler-update'
+includeBuild "$konanHome/shared"
+includeBuild "$konanHome/tools/kotlin-native-gradle-plugin"
